@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+import { BrowserRouter } from 'react-router-dom'
 
 import { Background } from "./Theme/Index"
 import { ThemeProvider } from './Contexts/ThemeContext'
@@ -8,10 +9,12 @@ import "./Styles/Index.css"
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Background>
-      <ThemeProvider>
-        <App />
-      </ThemeProvider>
-    </Background>
+    <BrowserRouter>
+      <Background>
+        <ThemeProvider>
+          <App />
+        </ThemeProvider>
+      </Background>
+    </BrowserRouter>
   </React.StrictMode>,
 )

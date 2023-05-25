@@ -1,8 +1,11 @@
+import React from 'react'
+import MainRoutes from "./Routes/Main.Routes"
+
 function App() {
 
   return (
     <>
-      <p>Heyy I am Abdul-Quayyum</p>
+      <MainRoutes />
     </>
   )
 }

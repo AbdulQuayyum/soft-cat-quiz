@@ -1,0 +1,23 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "The Server side providing an API Service returning questions about cats",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon Server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AbdulQuayyum/soft-cat-quiz/tree/Source/Server"
+  },
+  "author": "Abdul-Quayyum",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^7.2.1",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.22"
+  }
+}

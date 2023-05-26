@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const MainLayout = () => {
+export default function MainLayout(props) {
     return (
         <div>MainLayout</div>
     )

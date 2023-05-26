@@ -1,7 +1,14 @@
 import React from 'react'
+import { Footer, Navbar } from "../Components/Index"
 
 export default function MainLayout(props) {
+    const { children } = props
+
     return (
-        <div>MainLayout</div>
+        <div>
+            <Navbar />
+            {children}
+            <Footer />
+        </div>
     )
 }

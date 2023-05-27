@@ -11,33 +11,33 @@ const Result = () => {
             <div className='w-full flex justify-center'>
                 <span className='text-3xl py-6'>Cat Quiz</span>
             </div>
-            <div className='flex flex-col justify-center pt-2 sm:pt-6 pb-10'>
-                <div className="flex">
+            <div className='flex flex-col border border-black justify-between w-full md:w-[550px] px-6 sm:px-10 py-10 mb-10 rounded-2xl pt-2 sm:pt-6 pb-10'>
+                <div className="flex justify-between">
                     <span>Username :</span>
                     <span>qwerrtyuiop</span>
                 </div>
-                <div className="flex">
+                <div className="flex justify-between">
                     <span>Total Quiz Points :</span>
                     <span>qwerrtyuiop</span>
                 </div>
-                <div className="flex">
+                <div className="flex justify-between">
                     <span>Total Questions :</span>
                     <span>qwerrtyuiop</span>
                 </div>
-                <div className="flex">
+                <div className="flex justify-between">
                     <span>Total Attempts :</span>
                     <span>qwerrtyuiop</span>
                 </div>
-                <div className="flex">
+                <div className="flex justify-between">
                     <span>Total Earn Points :</span>
                     <span>qwerrtyuiop</span>
                 </div>
-                <div className="flex">
+                <div className="flex justify-between">
                     <span>Quiz Result :</span>
                     <span>qwerrtyuiop</span>
                 </div>
             </div>
-            <div>
+            <div className='mb-10 flex justify-end'>
                 <Link
                     to={"/"}
                     onClick={onRestart}

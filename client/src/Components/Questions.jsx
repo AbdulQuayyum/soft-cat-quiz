@@ -5,10 +5,10 @@ export default function Questions() {
     // console.log(Dummy)
     const [checked, setChecked] = useState(undefined)
 
-    const questions = Dummy[0]
+    const Questions = Dummy[0]
 
     useEffect(() => {
-        console.log(questions)
+        console.log(Questions)
     })
 
     const onSelect = () => { }
@@ -18,12 +18,12 @@ export default function Questions() {
             <div>
                 <div className='w-full flex flex-col justify-center'>
                     <div className='py-4'>
-                        <span className='text-xl sm:text-3xl py-0 sm:py-6'>{questions?.question}</span>
+                        <span className='text-xl sm:text-3xl py-0 sm:py-6'>{Questions?.question}</span>
                     </div>
                     <div className='pt-2 sm:pt-6 pb-10'>
-                        <ul key={questions?.id} className='flex gap-y-4 flex-col'>
+                        <ul key={Questions?.id} className='flex gap-y-4 flex-col'>
                             {
-                                questions?.options.map((questions, index) => (
+                                Questions?.options.map((Questions, index) => (
                                     <li key={index} className='flex cursor-pointer' >
                                         <input
                                             id={`question${index}-option`}
@@ -35,7 +35,7 @@ export default function Questions() {
                                         <label
                                             htmlFor={`question${index}-option`}
                                             className="ml-2 text-base sm:text-lg cursor-pointer font-medium text-black dark:text-gray-300">
-                                            {questions}
+                                            {Questions}
                                         </label>
 
                                         {/* <input 
@@ -45,7 +45,7 @@ export default function Questions() {
                                             id={`question${index}-option`}
                                             onChange={() => onSelect(index)}
                                         />
-                                        <label className='text-primary' htmlFor={`question${index}-option`}>{questions}</label> */}
+                                        <label className='text-primary' htmlFor={`question${index}-option`}>{Questions}</label> */}
                                     </li>
                                 ))
                             }

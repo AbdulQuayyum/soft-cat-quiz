@@ -7,7 +7,7 @@ const Quiz = () => {
     const onPrev = () => { }
 
     return (
-        <div className='container'>
+        <div className=''>
             <div className='w-full flex justify-center'>
                 <span className='text-3xl py-6'>Cat Quiz</span>
             </div>

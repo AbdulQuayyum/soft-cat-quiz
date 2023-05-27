@@ -1,7 +1,7 @@
 export default [
     {
         id: 1,
-        question: "A cat is pregnant for how long?",
+        Question: "A cat is pregnant for how long?",
         options: [
             '10 and 20 days',
             '100 and 120 days',
@@ -10,7 +10,7 @@ export default [
     },
     {
         id: 2,
-        question: "What is a baby cat called?",
+        Question: "What is a baby cat called?",
         options: [
             'A Kid',
             'A Kitten',
@@ -19,7 +19,7 @@ export default [
     },
     {
         id: 3,
-        question: "What is a group of cats called?",
+        Question: "What is a group of cats called?",
         options: [
             'A Gang',
             'A Clowder',
@@ -28,7 +28,7 @@ export default [
     },
     {
         id: 4,
-        question: "What is the fluttering sound made by a cat called?",
+        Question: "What is the fluttering sound made by a cat called?",
         options: [
             'A Purr',
             'A Bark',
@@ -37,7 +37,7 @@ export default [
     },
     {
         id: 5,
-        question: "How many teeth does an adult cat have?",
+        Question: "How many teeth does an adult cat have?",
         options: [
             '30',
             '24',
@@ -46,7 +46,7 @@ export default [
     },
     {
         id: 6,
-        question: "What is a male cat called?",
+        Question: "What is a male cat called?",
         options: [
             'A Garfield',
             'A Tom',
@@ -55,7 +55,7 @@ export default [
     },
     {
         id: 7,
-        question: "What is a litter of kittens called?",
+        Question: "What is a litter of kittens called?",
         options: [
             'A Kindle',
             'A Whelp',
@@ -64,7 +64,7 @@ export default [
     },
     {
         id: 8,
-        question: "What is a female cat called?",
+        Question: "What is a female cat called?",
         options: [
             'A Princess',
             'An Empress',
@@ -73,7 +73,7 @@ export default [
     },
     {
         id: 9,
-        question: "When your cat rubs you, what is he showing?",
+        Question: "When your cat rubs you, what is he showing?",
         options: [
             'Friendship',
             'Ownership',
@@ -82,7 +82,7 @@ export default [
     },
     {
         id: 10,
-        question: "In what year was the first cat sent to space?",
+        Question: "In what year was the first cat sent to space?",
         options: [
             '2004',
             '1999',
@@ -91,4 +91,4 @@ export default [
     },
 ]
 
-export const answers = [2, 1, 1, 0, 0, 1, 0, 2, 0, 2]
+export const Answers = [2, 1, 1, 0, 0, 1, 0, 2, 0, 2]

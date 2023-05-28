@@ -23,7 +23,7 @@ export default function Questions() {
                     <div className='pt-2 sm:pt-6 pb-10'>
                         <ul key={Questions?.id} className='flex gap-y-4 flex-col'>
                             {
-                                Questions?.options.map((Questions, index) => (
+                                Questions?.Options.map((Questions, index) => (
                                     <li key={index} className='flex cursor-pointer' >
                                         <input
                                             id={`Question${index}-option`}
@@ -41,7 +41,7 @@ export default function Questions() {
                                         {/* <input 
                                         type="radio"
                                             value={false}
-                                            name='options'
+                                            name='Options'
                                             id={`Question${index}-option`}
                                             onChange={() => onSelect(index)}
                                         />

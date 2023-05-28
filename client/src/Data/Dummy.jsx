@@ -2,7 +2,7 @@ export default [
     {
         id: 1,
         Question: "A cat is pregnant for how long?",
-        options: [
+        Options: [
             '10 and 20 days',
             '100 and 120 days',
             '60 and 70 days',
@@ -11,7 +11,7 @@ export default [
     {
         id: 2,
         Question: "What is a baby cat called?",
-        options: [
+        Options: [
             'A Kid',
             'A Kitten',
             'A Puppy',
@@ -20,7 +20,7 @@ export default [
     {
         id: 3,
         Question: "What is a group of cats called?",
-        options: [
+        Options: [
             'A Gang',
             'A Clowder',
             'A Bunch',
@@ -29,7 +29,7 @@ export default [
     {
         id: 4,
         Question: "What is the fluttering sound made by a cat called?",
-        options: [
+        Options: [
             'A Purr',
             'A Bark',
             'A Bleat',
@@ -38,7 +38,7 @@ export default [
     {
         id: 5,
         Question: "How many teeth does an adult cat have?",
-        options: [
+        Options: [
             '30',
             '24',
             '20',
@@ -47,7 +47,7 @@ export default [
     {
         id: 6,
         Question: "What is a male cat called?",
-        options: [
+        Options: [
             'A Garfield',
             'A Tom',
             'A King',
@@ -56,7 +56,7 @@ export default [
     {
         id: 7,
         Question: "What is a litter of kittens called?",
-        options: [
+        Options: [
             'A Kindle',
             'A Whelp',
             'A Farrow',
@@ -65,7 +65,7 @@ export default [
     {
         id: 8,
         Question: "What is a female cat called?",
-        options: [
+        Options: [
             'A Princess',
             'An Empress',
             'A Queen',
@@ -74,7 +74,7 @@ export default [
     {
         id: 9,
         Question: "When your cat rubs you, what is he showing?",
-        options: [
+        Options: [
             'Friendship',
             'Ownership',
             'Aggression',
@@ -83,7 +83,7 @@ export default [
     {
         id: 10,
         Question: "In what year was the first cat sent to space?",
-        options: [
+        Options: [
             '2004',
             '1999',
             '1963',

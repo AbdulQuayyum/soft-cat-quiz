@@ -9,31 +9,31 @@ export const QuestionReducer = createSlice({
         Trace: 0
     },
     reducers: {
-        StartExamAction : (state, action) => {
-            let { Question, Answers} = action.payload
+        StartExamAction: (state, action) => {
+            let { Question, Answers } = action.payload
             return {
                 ...state,
-                Queue : Question,
+                Queue: Question,
                 Answers
             }
         },
-        MoveNextAction : (state) => {
+        MoveNextAction: (state) => {
             return {
                 ...state,
-                trace : state.Trace + 1
+                Trace: state.Trace + 1
             }
         },
-        MovePrevAction : (state) => {
+        MovePrevAction: (state) => {
             return {
                 ...state,
-                Trace : state.Trace - 1
+                Trace: state.Trace - 1
             }
         },
-        ResetAllAction : () => {
+        ResetAllAction: () => {
             return {
                 Queue: [],
-                Answers : [],
-                Trace : 0
+                Answers: [],
+                Trace: 0
             }
         }
     }

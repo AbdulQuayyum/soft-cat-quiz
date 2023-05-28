@@ -1,10 +1,17 @@
 import React from 'react'
+import { Navigate } from 'react-router-dom'
+import { useSelector, useDispatch } from 'react-redux'
+
 import { Questions } from "../Components/Index"
 
 const Quiz = () => {
 
-    const onNext = () => { }
-    const onPrev = () => { }
+    const state = useSelector(state => state)
+
+    console.log(state)
+
+    const onNext = () => { console.log("next") }
+    const onPrev = () => { console.log("prev") }
 
     return (
         <div className=''>

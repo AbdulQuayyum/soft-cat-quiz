@@ -1,0 +1,23 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito";
+}
+
+@media screen and (max-width:400px) {
+    table {
+        display: flex;
+    }
+
+    table thead tr,
+    tbody tr {
+        display: flex;
+        flex-direction: column;
+    }
+
+    table tbody tr td {
+        padding: 0;
+    }
+}

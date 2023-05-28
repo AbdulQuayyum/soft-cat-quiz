@@ -37,7 +37,7 @@ const Result = () => {
                     <span>qwerrtyuiop</span>
                 </div>
             </div>
-            <div className='mb-10 flex justify-end'>
+            <div className='mb-10 flex justify-center sm:justify-end'>
                 <Link
                     to={"/"}
                     onClick={onRestart}

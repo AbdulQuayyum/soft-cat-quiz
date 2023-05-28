@@ -91,4 +91,4 @@ export default [
     },
 ]
 
-export const Answers = [2, 1, 1, 0, 0, 1, 0, 2, 0, 2]
+export const answers = [2, 1, 1, 0, 0, 1, 0, 2, 0, 2]

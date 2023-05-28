@@ -1,17 +1,32 @@
 import React, { useEffect, useState } from 'react'
-import Dummy from '../Data/Dummy'
+import { useDispatch, useSelector } from 'react-redux'
+
+// import Dummy from '../Data/Dummy'
+import { UseFetchQuestion } from '../Utilities/FetchQuestion'
 
 export default function Questions() {
     // console.log(Dummy)
     const [checked, setChecked] = useState(undefined)
+    const { trace } = useSelector(state => state.Questions)
+    const Result = useSelector(state => state.Result.Result)
+    const [{ IsLoading, APIData, ServerError }] = UseFetchQuestion()
 
-    const Questions = Dummy[0]
+    const Questions = useSelector(state => state.Questions.queue[state.Questions.trace])
+    const dispatch = useDispatch()
+
+    // const Questions = Dummy[0]
 
     useEffect(() => {
         console.log(Questions)
+        // console.log(IsLoading)
+        // console.log(APIData)
+        // console.log(ServerError)
     })
 
     const onSelect = () => { }
+
+    // if (IsLoading) return <h3 className=''>isLoading</h3>
+    // if (ServerError) return <h3 className=''>{ServerError || "Unknown Error"}</h3>
 
     return (
         <div className=''>

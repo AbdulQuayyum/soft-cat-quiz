@@ -9,29 +9,29 @@ export const UseFetchQuestion = () => {
     const [getData, setGetData] = useState({ IsLoading: false, APIData: [], ServerError: null })
 
     useEffect(() => {
-        setGetData(prev => ({ ...prev, IsLoading: true }))
+        setGetData(prev => ({ ...prev, IsLoading: true }));
 
-            (async () => {
-                try {
+        (async () => {
+            try {
+                const Questions = Dummy
+                // const [{ Questions, answers }] = await (Dummy, (Data) => Data)
 
-                    let Questions = await Dummy
-
-                    if (Questions.length > 0) {
-                        setGetData(prev => ({ ...prev, IsLoading: false }));
-                        setGetData(prev => ({ ...prev, APIData: Questions }));
-
-                        /** dispatch an action */
-                        dispatch(Action.StartExamAction({ Question: Questions, Answers }))
-
-                    } else {
-                        throw new Error("No Question Avalibale");
-                    }
-
-                } catch (error) {
+                if (Questions.length > 0) {
                     setGetData(prev => ({ ...prev, IsLoading: false }));
-                    setGetData(prev => ({ ...prev, ServerError: error }));
+                    setGetData(prev => ({ ...prev, APIData: Questions }));
+
+                    /** dispatch an action */
+                    dispatch(Action.StartExamAction({ Question: Questions, answers }))
+
+                } else {
+                    throw new Error("No Question Avalibale");
                 }
-            })()
+
+            } catch (error) {
+                setGetData(prev => ({ ...prev, IsLoading: false }));
+                setGetData(prev => ({ ...prev, ServerError: error }));
+            }
+        })()
 
     }, [dispatch])
 

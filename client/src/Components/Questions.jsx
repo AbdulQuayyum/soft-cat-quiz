@@ -7,11 +7,11 @@ import { UseFetchQuestion } from '../Utilities/FetchQuestion'
 export default function Questions() {
     // console.log(Dummy)
     const [checked, setChecked] = useState(undefined)
-    const { trace } = useSelector(state => state.Questions)
+    const { Trace } = useSelector(state => state.Questions)
     const Result = useSelector(state => state.Result.Result)
     const [{ IsLoading, APIData, ServerError }] = UseFetchQuestion()
 
-    const Questions = useSelector(state => state.Questions.queue[state.Questions.trace])
+    const Questions = useSelector(state => state.Questions.Queue[state.Questions.Trace])
     const dispatch = useDispatch()
 
     // const Questions = Dummy[0]

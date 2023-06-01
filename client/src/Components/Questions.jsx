@@ -11,13 +11,13 @@ export default function Questions() {
     const Result = useSelector(state => state.Result.Result)
     const [{ IsLoading, APIData, ServerError }] = UseFetchQuestion()
 
-    // const Questions = useSelector(state => state.Questions.Queue[state.Questions.Trace])
+    const Questions = useSelector(state => state.Questions.Queue[state.Questions.Trace])
     const dispatch = useDispatch()
 
-    const Questions = Dummy[0]
+    // const Questions = Dummy[0]
 
     useEffect(() => {
-        // console.log(Questions)
+        console.log(Questions)
         // console.log(IsLoading)
         // console.log(APIData)
         // console.log(ServerError)
@@ -25,8 +25,8 @@ export default function Questions() {
 
     const onSelect = () => { }
 
-    // if (IsLoading) return <h3 className=''>isLoading</h3>
-    // if (ServerError) return <h3 className=''>{ServerError || "Unknown Error"}</h3>
+    if (IsLoading) return <h3 className=''>isLoading</h3>
+    if (ServerError) return <h3 className=''>{ServerError || "Unknown Error"}</h3>
 
     return (
         <div className=''>

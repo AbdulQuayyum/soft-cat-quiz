@@ -28,7 +28,8 @@ export default function Questions({ onChecked }) {
         dispatch(UpdateResult({ Trace, Checked }))
     }, [Checked])
 
-    const onSelect = () => {
+    const onSelect = (index) => {
+        console.log("hello")
         onChecked(index)
         setChecked(index)
         dispatch(UpdateResult({ Trace, Checked }))

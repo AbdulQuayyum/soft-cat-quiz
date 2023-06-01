@@ -27,11 +27,11 @@ const Quiz = () => {
             /** increase the trace value by one using MoveNextAction */
             dispatch(MoveNextQuestion());
 
-            dispatch(PushAnswer(1))
+            // dispatch(PushAnswer(1))
             /** insert a new result in the array.  */
-            // if (Result.length <= Trace) {
-            //     dispatch(PushAnswer(check))
-            // }
+            if (Result.length <= Trace) {
+                dispatch(PushAnswer(check))
+            }
         }
 
         /** reset the value of the checked variable */

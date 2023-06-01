@@ -15,7 +15,8 @@ const Quiz = () => {
     const dispatch = useDispatch()
 
     useEffect(() => {
-        console.log(state)
+        console.log(Result)
+        // console.log(state)
         // console.log(Queue)
         // console.log(Trace)
     })

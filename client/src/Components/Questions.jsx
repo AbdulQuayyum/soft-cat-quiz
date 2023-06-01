@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 
 import Dummy from '../Data/Dummy'
 import { UseFetchQuestion } from '../Utilities/FetchQuestion'
+import { UpdateResult } from '../Utilities/SetResult'
 
 export default function Questions({ onChecked }) {
     // console.log(Dummy)
@@ -23,7 +24,15 @@ export default function Questions({ onChecked }) {
     // console.log(ServerError)
     // })
 
-    const onSelect = () => { }
+    useEffect(() => {
+        dispatch(UpdateResult({ Trace, Checked }))
+    }, [Checked])
+
+    const onSelect = () => {
+        onChecked(index)
+        setChecked(index)
+        dispatch(UpdateResult({ Trace, Checked }))
+    }
 
     if (IsLoading) return <h3 className=''>isLoading</h3>
     if (ServerError) return <h3 className=''>{ServerError || "Unknown Error"}</h3>

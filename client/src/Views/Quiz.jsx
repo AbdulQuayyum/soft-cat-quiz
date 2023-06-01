@@ -9,14 +9,16 @@ import { Questions } from "../Components/Index"
 const Quiz = () => {
     const [check, setChecked] = useState(undefined)
 
+    const state = useSelector(state => state)
     const Result = useSelector(state => state.Result.Result)
     const { Queue, Trace } = useSelector(state => state.Questions)
     const dispatch = useDispatch()
 
-    // useEffect(() => {
-    //     console.log(Queue)
-    //     console.log(Trace)
-    // })
+    useEffect(() => {
+        console.log(state)
+        // console.log(Queue)
+        // console.log(Trace)
+    })
 
     const onChecked = (check) => { setChecked(check) }
 
@@ -25,10 +27,11 @@ const Quiz = () => {
             /** increase the trace value by one using MoveNextAction */
             dispatch(MoveNextQuestion());
 
+            dispatch(PushAnswer(1))
             /** insert a new result in the array.  */
-            if (Result.length <= Trace) {
-                dispatch(PushAnswer(check))
-            }
+            // if (Result.length <= Trace) {
+            //     dispatch(PushAnswer(check))
+            // }
         }
 
         /** reset the value of the checked variable */

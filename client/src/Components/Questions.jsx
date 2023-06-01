@@ -16,12 +16,12 @@ export default function Questions({ onChecked }) {
 
     // const Questions = Dummy[0]
 
-    useEffect(() => {
-        console.log(Questions)
-        // console.log(IsLoading)
-        // console.log(APIData)
-        // console.log(ServerError)
-    })
+    // useEffect(() => {
+    // console.log(Questions)
+    // console.log(IsLoading)
+    // console.log(APIData)
+    // console.log(ServerError)
+    // })
 
     const onSelect = () => { }
 

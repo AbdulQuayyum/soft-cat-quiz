@@ -11,16 +11,35 @@ const Quiz = () => {
 
     const Result = useSelector(state => state.Result.Result)
     const { Queue, Trace } = useSelector(state => state.Questions)
+    const dispatch = useDispatch()
 
-    useEffect(() => {
-        // console.log(Queue)
-        // console.log(Trace)
-    })
+    // useEffect(() => {
+    //     console.log(Queue)
+    //     console.log(Trace)
+    // })
 
     const onChecked = (check) => { setChecked(check) }
 
-    const onNext = () => { console.log("next") }
-    const onPrev = () => { console.log("prev") }
+    const onNext = () => {
+        if (Trace < Queue.length) {
+            /** increase the trace value by one using MoveNextAction */
+            dispatch(MoveNextQuestion());
+
+            /** insert a new result in the array.  */
+            if (Result.length <= Trace) {
+                dispatch(PushAnswer(check))
+            }
+        }
+
+        /** reset the value of the checked variable */
+        setChecked(undefined)
+    }
+
+    const onPrev = () => {
+        if (Trace > 0) {
+            dispatch(MovePrevQuestion())
+        }
+    }
 
     if (Result.length && Result.length >= Queue.length) {
         return

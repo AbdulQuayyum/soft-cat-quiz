@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Navigate } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 
@@ -8,7 +8,10 @@ const Quiz = () => {
 
     const state = useSelector(state => state)
 
-    console.log(state)
+    useEffect(() => {
+        console.log(state)
+    })
+
 
     const onNext = () => { console.log("next") }
     const onPrev = () => { console.log("prev") }

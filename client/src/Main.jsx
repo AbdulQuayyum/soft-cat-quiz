@@ -12,14 +12,14 @@ import "./Styles/Style.css"
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter>
-      <Background>
-        <ThemeProvider>
-          <Provider store={Store}>
+    <Provider store={Store}>
+      <BrowserRouter>
+        <Background>
+          <ThemeProvider>
             <App />
-          </Provider>
-        </ThemeProvider>
-      </Background>
-    </BrowserRouter>
+          </ThemeProvider>
+        </Background>
+      </BrowserRouter>
+    </Provider>
   </React.StrictMode>,
 )

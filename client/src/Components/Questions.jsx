@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
-// import Dummy from '../Data/Dummy'
+import Dummy from '../Data/Dummy'
 import { UseFetchQuestion } from '../Utilities/FetchQuestion'
 
 export default function Questions() {
@@ -11,13 +11,13 @@ export default function Questions() {
     const Result = useSelector(state => state.Result.Result)
     const [{ IsLoading, APIData, ServerError }] = UseFetchQuestion()
 
-    const Questions = useSelector(state => state.Questions.Queue[state.Questions.Trace])
+    // const Questions = useSelector(state => state.Questions.Queue[state.Questions.Trace])
     const dispatch = useDispatch()
 
-    // const Questions = Dummy[0]
+    const Questions = Dummy[0]
 
     useEffect(() => {
-        console.log(Questions)
+        // console.log(Questions)
         // console.log(IsLoading)
         // console.log(APIData)
         // console.log(ServerError)

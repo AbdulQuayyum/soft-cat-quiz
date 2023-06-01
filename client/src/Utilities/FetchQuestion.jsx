@@ -13,7 +13,8 @@ export const UseFetchQuestion = () => {
 
         (async () => {
             try {
-                const Questions = Dummy
+                const Questions = await Dummy
+                // console.log(Questions)
                 // const [{ Questions, Answers }] = await (Dummy, (Data) => Data)
 
                 if (Questions.length > 0) {
@@ -21,7 +22,8 @@ export const UseFetchQuestion = () => {
                     setGetData(prev => ({ ...prev, APIData: Questions }));
 
                     /** dispatch an action */
-                    dispatch(Action.StartExamAction({ Question: Questions, Answers }))
+                    // dispatch(Action.StartExamAction(Questions))
+                    dispatch(Action.StartExamAction({ Question: Questions }))
 
                 } else {
                     throw new Error("No Question Avalibale");

@@ -1,10 +1,19 @@
 import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux';
 
 import { ResultTable } from "../Components/Index"
+import { ResetAllAction } from '../Redux/QuestionReducer';
+import { ResetResultAction } from '../Redux/ResultReducer';
+import { UsePublishResult } from '../Utilities/SetResult';
 
 const Result = () => {
-    const onRestart = () => { }
+    const dispatch = useDispatch()
+
+    const onRestart = () => {
+        dispatch(ResetAllAction())
+        dispatch(ResetResultAction())
+    }
 
     return (
         <div>

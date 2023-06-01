@@ -43,7 +43,7 @@ export default function Questions({ onChecked }) {
             <div>
                 <div className='w-full flex flex-col justify-center'>
                     <div className='py-4'>
-                        <span className='text-xl sm:text-3xl py-0 sm:py-6'>{Questions?.Question}</span>
+                        <span className='text-xl sm:text-3xl py-0 sm:py-6'>{Questions?.id}.  {Questions?.Question}</span>
                     </div>
                     <div className='pt-2 sm:pt-6 pb-10'>
                         <ul key={Questions?.id} className='flex gap-y-4 flex-col'>

@@ -15,7 +15,7 @@ const Quiz = () => {
     const dispatch = useDispatch()
 
     useEffect(() => {
-        // console.log(state)
+        console.log(state)
         // console.log(Queue)
         // console.log(Trace)
     })
@@ -25,11 +25,11 @@ const Quiz = () => {
             /** increase the trace value by one using MoveNextAction */
             dispatch(MoveNextQuestion());
 
-            // dispatch(PushAnswer(1))
+            dispatch(PushAnswer(check))
             /** insert a new result in the array.  */
-            if (Result.length <= Trace) {
-                dispatch(PushAnswer(check))
-            }
+            // if (Result.length <= Trace) {
+            //     dispatch(PushAnswer(check))
+            // }
         }
 
         /** reset the value of the checked variable */
@@ -42,7 +42,7 @@ const Quiz = () => {
         }
     }
 
-    const onChecked = (check) => { setChecked(check) }
+    const onChecked = (check) => { console.log(check); setChecked(check) }
 
     if (Result.length && Result.length >= Queue.length) {
         return <Navigate to={'/Result'} replace={true} />

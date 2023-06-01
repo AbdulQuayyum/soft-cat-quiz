@@ -15,12 +15,10 @@ const Quiz = () => {
     const dispatch = useDispatch()
 
     useEffect(() => {
-        console.log(state)
+        // console.log(state)
         // console.log(Queue)
         // console.log(Trace)
     })
-
-    const onChecked = (check) => { setChecked(check) }
 
     const onNext = () => {
         if (Trace < Queue.length) {
@@ -43,6 +41,8 @@ const Quiz = () => {
             dispatch(MovePrevQuestion())
         }
     }
+
+    const onChecked = (check) => { setChecked(check) }
 
     if (Result.length && Result.length >= Queue.length) {
         return <Navigate to={'/Result'} replace={true} />

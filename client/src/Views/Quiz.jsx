@@ -42,8 +42,7 @@ const Quiz = () => {
     }
 
     if (Result.length && Result.length >= Queue.length) {
-        return
-        <Navigate to={'/Result'} replace={true} />
+        return <Navigate to={'/Result'} replace={true} />
     }
 
     return (

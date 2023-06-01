@@ -6,7 +6,7 @@ import { UseFetchQuestion } from '../Utilities/FetchQuestion'
 
 export default function Questions({ onChecked }) {
     // console.log(Dummy)
-    const [checked, setChecked] = useState(undefined)
+    const [Checked, setChecked] = useState(undefined)
     const { Trace } = useSelector(state => state.Questions)
     const Result = useSelector(state => state.Result.Result)
     const [{ IsLoading, APIData, ServerError }] = UseFetchQuestion()

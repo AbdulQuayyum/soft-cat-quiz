@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import Dummy from '../Data/Dummy'
 import { UseFetchQuestion } from '../Utilities/FetchQuestion'
 
-export default function Questions() {
+export default function Questions({ onChecked }) {
     // console.log(Dummy)
     const [checked, setChecked] = useState(undefined)
     const { Trace } = useSelector(state => state.Questions)

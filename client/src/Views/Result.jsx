@@ -36,27 +36,27 @@ const Result = () => {
             <div className='flex flex-col border border-black justify-between w-full md:w-[550px] px-6 sm:px-10 py-10 mb-10 rounded-2xl pt-2 sm:pt-6 pb-10'>
                 <div className="flex justify-between">
                     <span>Username :</span>
-                    <span>qwerrtyuiop</span>
+                    <span>{UserID || ""}</span>
                 </div>
                 <div className="flex justify-between">
                     <span>Total Quiz Points :</span>
-                    <span>qwerrtyuiop</span>
+                    <span>{TotalPoints || 0}</span>
                 </div>
                 <div className="flex justify-between">
                     <span>Total Questions :</span>
-                    <span>qwerrtyuiop</span>
+                    <span>{Queue.length || 0}</span>
                 </div>
                 <div className="flex justify-between">
                     <span>Total Attempts :</span>
-                    <span>qwerrtyuiop</span>
+                    <span>{Attempts || 0}</span>
                 </div>
                 <div className="flex justify-between">
                     <span>Total Earn Points :</span>
-                    <span>qwerrtyuiop</span>
+                    <span>{EarnPoints || 0}</span>
                 </div>
                 <div className="flex justify-between">
                     <span>Quiz Result :</span>
-                    <span>qwerrtyuiop</span>
+                    <span style={{ color: `${Flag ? "#2aff95" : "#ff2a66"}` }} >{Flag ? "Passed" : "Failed"}</span>
                 </div>
             </div>
             <div className='mb-10 flex justify-center sm:justify-end'>

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import { useDispatch } from "react-redux"
 
 import * as Action from "../Redux/QuestionReducer"
-import Dummy from "../Data/Dummy"
+import Dummy, { Answers } from "../Data/Dummy"
 
 export const UseFetchQuestion = () => {
     const dispatch = useDispatch()
@@ -19,11 +19,11 @@ export const UseFetchQuestion = () => {
 
                 if (Questions.length > 0) {
                     setGetData(prev => ({ ...prev, IsLoading: false }));
-                    setGetData(prev => ({ ...prev, APIData: Questions }));
+                    setGetData(prev => ({ ...prev, APIData: Questions, Answers }));
 
                     /** dispatch an action */
                     // dispatch(Action.StartExamAction(Questions))
-                    dispatch(Action.StartExamAction({ Question: Questions }))
+                    dispatch(Action.StartExamAction({ Question: Questions, Answers }))
 
                 } else {
                     throw new Error("No Question Avalibale");

@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "The Server side providing an API Service returning questions about cats",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "start": "nodemon Server.js"
   },

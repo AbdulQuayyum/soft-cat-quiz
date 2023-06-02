@@ -16,7 +16,7 @@ const Quiz = () => {
 
     useEffect(() => {
         // console.log(Result)
-        console.log(state)
+        // console.log(state)
         // console.log(Queue)
         // console.log(Trace)
     })

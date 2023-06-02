@@ -3,6 +3,8 @@ import morgan from "morgan";
 import cors from "cors";
 import { config } from "dotenv";
 
+import router from "./Router/Route.js";
+
 const app = express();
 
 /** app middlewares */
@@ -10,6 +12,9 @@ app.use(morgan('tiny'));
 app.use(cors());
 app.use(express.json());
 config();
+
+/** routes */
+app.use('/API', router) /** apis */
 
 app.get('/', (req, res) => {
     try {

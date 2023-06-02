@@ -1,6 +1,6 @@
-import Questions from "../Models/QuestionSchema"
-import Result from "../Models/ResultSchema"
-import NewQuestions, { Answers } from "../Database/Data"
+import Questions from "../Models/QuestionSchema.js"
+import Result from "../Models/ResultSchema.js"
+import NewQuestions, { Answers } from "../Database/Data.js"
 
 /** get all questions */
 export async function GetQuestions(req, res) { }

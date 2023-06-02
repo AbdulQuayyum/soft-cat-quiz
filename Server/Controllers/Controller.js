@@ -1,21 +1,32 @@
-import Questions from "../Models/QuestionSchema.js"
+import Question from "../Models/QuestionSchema.js"
 import Results from "../Models/ResultSchema.js"
-import NewQuestions, { Answers } from "../Database/Data.js"
+import Questions, { Answers } from "../Database/Data.js"
 
 /** get all questions */
 export async function GetQuestions(req, res) {
     try {
-        const Questions = await Questions.find();
-        res.json(Questions)
+        const Question = await Question.find();
+        res.json(Question)
     } catch (error) {
         res.json({ error })
     }
 }
 
 /** insert all questinos */
+// export async function InsertQuestions(req, res) {
+//     try {
+//         Question.insertMany({ Questions, Answers }
+//             .then(function (err, data) {
+//                 res.json({ msg: "Data Saved Successfully...!" })
+//             }))
+//     } catch (error) {
+//         res.json({ error })
+//     }
+// }
+
 export async function InsertQuestions(req, res) {
     try {
-        Questions.insertMany({ NewQuestions, Answers }, function (err, data) {
+        Question.insertMany({ Questions, Answers }, function (err, data) {
             res.json({ msg: "Data Saved Successfully...!" })
         })
     } catch (error) {
@@ -23,11 +34,11 @@ export async function InsertQuestions(req, res) {
     }
 }
 
-/** Delete all Questions */
+/** Delete all Question */
 export async function DropQuestions(req, res) {
     try {
-        await Questions.deleteMany();
-        res.json({ msg: "Questions Deleted Successfully...!" });
+        await Question.deleteMany();
+        res.json({ msg: "Question Deleted Successfully...!" });
     } catch (error) {
         res.json({ error })
     }

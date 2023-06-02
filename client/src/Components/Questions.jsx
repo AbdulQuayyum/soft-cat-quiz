@@ -55,7 +55,7 @@ export default function Questions({ onChecked }) {
                                             onChange={() => onSelect(index)}
                                             type="radio"
                                             value={index}
-                                            checked={Result[Trace] == index ? true : false}
+                                            checked={Result[Trace] == index ? true : ''}
                                             name="option"
                                             className="w-6 h-6 cursor-pointer bg-white accent-black border-gray-300 outline-none" />
                                         <label

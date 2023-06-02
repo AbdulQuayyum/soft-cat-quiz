@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux';
 
+import { AttemptsNumber, EarnPointsNumber, FlagResult } from '../Utilities/Helper';
 import { ResultTable } from "../Components/Index"
 import { ResetAllAction } from '../Redux/QuestionReducer';
 import { ResetResultAction } from '../Redux/ResultReducer';
@@ -16,6 +17,11 @@ const Result = () => {
     })
 
     const TotalPoints = Queue.length * 10
+    const Attempts = AttemptsNumber(Result)
+    const EarnPoints = EarnPointsNumber(Result, Answers, 10)
+    const Flag = FlagResult(TotalPoints, EarnPoints)
+
+    UsePublishResult({ Result, UserName: UserID, Attempts, Points: EarnPoints, Achived: Flag ? "Passed" : "Failed" })
 
     const onRestart = () => {
         dispatch(ResetAllAction())

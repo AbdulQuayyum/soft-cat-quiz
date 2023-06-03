@@ -7,6 +7,7 @@ import { UpdateResult } from '../Utilities/SetResult'
 
 export default function Questions({ onChecked }) {
     // console.log(Dummy)
+    const [selectedOption, setSelectedOption] = useState('')
     const [Checked, setChecked] = useState(undefined)
     const { Trace } = useSelector(state => state.Questions)
     const Result = useSelector(state => state.Result.Result)
@@ -18,19 +19,20 @@ export default function Questions({ onChecked }) {
     // const Questions = Dummy[0]
 
     // useEffect(() => {
+    // console.log(selectedOption)
     // console.log(Questions)
     // console.log(IsLoading)
     // console.log(APIData)
     // console.log(ServerError)
-    // })
+    // }, [selectedOption])
 
     useEffect(() => {
         dispatch(UpdateResult({ Trace, Checked }))
     }, [Checked])
 
     const onSelect = (index) => {
-        // console.log(index) 
         onChecked(index)
+        setSelectedOption(index)
         setChecked(index)
         dispatch(UpdateResult({ Trace, Checked }))
     }
@@ -55,7 +57,7 @@ export default function Questions({ onChecked }) {
                                             onChange={() => onSelect(index)}
                                             type="radio"
                                             value={index}
-                                            checked={Result[Trace] == index ? true : ''}
+                                            // checked={Result[Trace] === index}
                                             name="option"
                                             className="w-6 h-6 cursor-pointer bg-white accent-black border-gray-300 outline-none" />
                                         <label
@@ -63,14 +65,14 @@ export default function Questions({ onChecked }) {
                                             className="ml-2 text-base sm:text-lg cursor-pointer font-medium text-black dark:text-gray-300">
                                             {Questions}
                                         </label>
-                                        {/* <input 
-                                        type="radio"
-                                            value={false}
-                                            name='Options'
-                                            id={`Question${index}-option`}
-                                            onChange={() => onSelect(index)}
-                                        />
-                                        <label className='text-primary' htmlFor={`Question${index}-option`}>{Questions}</label> */}
+                                        {
+                                            Result[Trace] === index ?
+                                                <div className='ml-4'>
+                                                    &#x2190; Your Choice
+                                                </div>
+                                                : <div></div>
+                                        }
+
                                     </li>
                                 ))
                             }

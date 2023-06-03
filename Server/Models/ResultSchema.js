@@ -6,7 +6,7 @@ const ResultModel = new Schema({
     Result: { type: Array, default: [] },
     Attempts: { type: Number, default: 0 },
     Points: { type: Number, default: 0 },
-    Achived: { type: String, default: '' },
+    Achieved: { type: String, default: '' },
     CreatedAt: { type: Date, default: Date.now }
 })
 

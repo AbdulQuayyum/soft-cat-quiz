@@ -58,10 +58,10 @@ export async function GetResult(req, res) {
 /** post all result */
 export async function StoreResult(req, res) {
     try {
-        const { UserName, Result, Attempts, Points, Achived } = req.body;
+        const { UserName, Result, Attempts, Points, Achieved } = req.body;
         if (!UserName && !Result) throw new Error('Data Not Provided...!');
 
-        Results.create({ UserName, Result, Attempts, Points, Achived }, function (err, data) {
+        Results.create({ UserName, Result, Attempts, Points, Achieved }, function (err, data) {
             res.json({ msg: "Result Saved Successfully...!" })
         })
 

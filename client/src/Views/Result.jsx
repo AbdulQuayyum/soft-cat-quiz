@@ -21,7 +21,7 @@ const Result = () => {
     const EarnPoints = EarnPointsNumber(Result, Answers, 10)
     const Flag = FlagResult(TotalPoints, EarnPoints)
 
-    UsePublishResult({ Result, UserName: UserID, Attempts, Points: EarnPoints, Achived: Flag ? "Passed" : "Failed" })
+    UsePublishResult({ Result, UserName: UserID, Attempts, Points: EarnPoints, Achieved: Flag ? "Passed" : "Failed" })
 
     const onRestart = () => {
         dispatch(ResetAllAction())

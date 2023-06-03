@@ -5,8 +5,9 @@ import Questions, { Answers } from "../Database/Data.js"
 /** get all questions */
 export async function GetQuestions(req, res) {
     try {
-        const Question = await Question.find();
-        res.json(Question)
+        const Q = await Question.find();
+        // console.log(Q)
+        res.json(Q)
     } catch (error) {
         res.json({ error })
     }

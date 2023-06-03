@@ -12,4 +12,14 @@ export const UpdateResult = (index) => async (dispatch) => {
     } catch (error) { console.error(error) }
 }
 
-export const UsePublishResult = (ResultData) => { }
+export const UsePublishResult = (ResultData) => {
+    const { Result, UserName } = ResultData
+        (async () => {
+            try {
+                if (Result !== [] && !UserName) throw new Error("Couldn't get Result");
+                await postServerData(`${import.meta.env.VITE_SERVER_URL}/v1/Result`, ResultData, data => data)
+            } catch (error) {
+                console.log(error)
+            }
+        })();
+}

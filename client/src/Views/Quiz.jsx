@@ -43,7 +43,7 @@ const Quiz = () => {
         }
     }
 
-    const onChecked = (check) => { console.log(check); setChecked(check) }
+    const onChecked = (check) => { setChecked(check) }
 
     if (Result.length && Result.length >= Queue.length) {
         return <Navigate to={'/Result'} replace={true} />

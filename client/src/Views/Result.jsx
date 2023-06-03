@@ -12,9 +12,9 @@ const Result = () => {
     const dispatch = useDispatch()
     const { Questions: { Queue, Answers }, Result: { Result, UserID } } = useSelector(state => state)
 
-    useEffect(() => {
-        console.log(Result)
-    })
+    // useEffect(() => {
+    //     console.log(Result)
+    // })
 
     const TotalPoints = Queue.length * 10
     const Attempts = AttemptsNumber(Result)

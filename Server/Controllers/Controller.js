@@ -48,8 +48,8 @@ export async function DropQuestions(req, res) {
 /** get all result */
 export async function GetResult(req, res) {
     try {
-        const Results = await Results.find();
-        res.json(Results)
+        const R = await Results.find();
+        res.json(R)
     } catch (error) {
         res.json({ error })
     }

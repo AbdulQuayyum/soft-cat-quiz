@@ -2,7 +2,8 @@ import { useEffect, useState } from "react"
 import { useDispatch } from "react-redux"
 
 import * as Action from "../Redux/QuestionReducer"
-import Dummy, { Answers } from "../Data/Dummy"
+import { GetServerData } from "./Helper"
+// import Dummy, { Answers } from "../Data/Dummy"
 
 export const UseFetchQuestion = () => {
     const dispatch = useDispatch()
@@ -13,13 +14,14 @@ export const UseFetchQuestion = () => {
 
         (async () => {
             try {
-                const Questions = await Dummy
+                const [{ Questions, Answers }] = await GetServerData(`${import.meta.env.VITE_SERVER_URL}/v1/Questions`, (data) => data)
+                // const Questions = await Dummy
                 // console.log(Questions)
                 // const [{ Questions, Answers }] = await (Dummy, (Data) => Data)
 
                 if (Questions.length > 0) {
                     setGetData(prev => ({ ...prev, IsLoading: false }));
-                    setGetData(prev => ({ ...prev, APIData: Questions, Answers }));
+                    setGetData(prev => ({ ...prev, APIData: Questions }));
 
                     /** dispatch an action */
                     // dispatch(Action.StartExamAction(Questions))

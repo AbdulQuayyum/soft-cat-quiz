@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
-import Dummy from '../Data/Dummy'
+// import Dummy from '../Data/Dummy'
 import { UseFetchQuestion } from '../Utilities/FetchQuestion'
 import { UpdateResult } from '../Utilities/SetResult'
 

@@ -1,4 +1,5 @@
 import * as Action from "../Redux/ResultReducer"
+import { PostServerData } from "./Helper"
 
 export const PushAnswer = (Result) => async (dispatch) => {
     try {
@@ -13,13 +14,13 @@ export const UpdateResult = (index) => async (dispatch) => {
 }
 
 export const UsePublishResult = (ResultData) => {
-    const { Result, UserName } = ResultData
-        (async () => {
-            try {
-                if (Result !== [] && !UserName) throw new Error("Couldn't get Result");
-                await postServerData(`${import.meta.env.VITE_SERVER_URL}/v1/Result`, ResultData, data => data)
-            } catch (error) {
-                console.log(error)
-            }
-        })();
+    const { Result, UserName } = ResultData;
+    (async () => {
+        try {
+            if (Result !== [] && !UserName) throw new Error("Couldn't get Result");
+            await PostServerData(`${import.meta.env.VITE_SERVER_URL}/v1/Result`, ResultData, data => data)
+        } catch (error) {
+            console.log(error)
+        }
+    })();
 }

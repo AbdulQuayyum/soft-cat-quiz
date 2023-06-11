@@ -7,6 +7,7 @@ import Connect from "./Database/Connect.js";
 import router from "./Router/Route.js";
 
 const app = express();
+let port = 8080;
 
 /** app middlewares */
 app.use(morgan('tiny'));
@@ -27,7 +28,7 @@ app.get('/', (req, res) => {
 
 Connect().then(() => {
     try {
-        app.listen(8080, () => {
+        app.listen(port, () => {
             console.log(`Server is running`)
         })
     } catch (error) {
